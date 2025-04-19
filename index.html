@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turistika v Gelnickom okrese</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+    }
+
+    header {
+      background: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 8px 8px 0 0;
+    }
+
+    main {
+      background: white;
+      padding: 2rem;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .map-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .map-container img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .map-label {
+      position: absolute;
+      color: white;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 4px 8px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .popup {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      bottom: 120%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      color: black;
+      padding: 10px;
+      border-radius: 6px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+      min-width: 160px;
+      transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+    }
+
+    .popup a {
+      display: block;
+      color: #007BFF;
+      text-decoration: none;
+      margin-bottom: 5px;
+    }
+
+    .popup a:hover {
+      text-decoration: underline;
+    }
+
+    .map-label:hover .popup {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 0.3s ease, visibility 0s linear 0s;
+    }
+
+    /* Label positions */
+    .label-city1 {
+      top: 35%;
+      left: 72%;
+    }
+
+    .label-city2 {
+      top: 50%;
+      left: 64%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Turistika v Gelnickom okrese</h1>
+    </header>
+    <main>
+      <div class="map-container">
+        <img src="./okres_gl_znaz.png" alt="Map of Region" />
+
+        <!-- Label with popup -->
+        <div class="map-label label-city1">
+          Gelnica
+          <div class="popup">
+            <a href="https://www.gelnica.sk/-historia-a-pamiatky.html" target="_blank">História a pamiatky</a>
+            <a href="https://www.gelnica.sk/banicke-muzeum-0.html" target="_blank">Banícke múzeum</a>
+            <a href="https://www.gelnica.sk/bansky-skanzen-a-stolna-jozef.html" target="_blank">Banský skanzen a Štôlňa Jozef</a>
+            <a href="https://www.gelnica.sk/ubytovanie-a-gastro.html" target="_blank">Ubytovanie a gastro</a>
+            <a href="https://www.gelnica.sk/prechadzky-pamiatkami-mesta.html" target="_blank">Prechádzky pamiatkami mesta</a>
+            <a href="https://www.gelnica.sk/bansky-naucny-chodnik.html" target="_blank">Banský náučný chodník</a>
+            <a href="https://www.gelnica.sk/turistika.html" target="_blank">Turistika</a>
+            <a href="https://www.gelnica.sk/cykloturistika-0.html" target="_blank">Cykloturistika</a>
+            <a href="https://www.gelnica.sk/jakubska-cesta-0.html" target="_blank">Jakubská cesta</a>
+            <a href="https://www.gelnica.sk/goticka-cesta-0.html" target="_blank">Gotická cesta</a>
+            <a href="https://www.gelnica.sk/oblastna-organizacia-cestovneho-ruchu-slovensky-raj-spis.html" target="_blank">Oblastná organizácia cestovného ruchu Slovenský raj & Spiš</a>
+            <a href="https://www.gelnica.sk/turisticky-vlacik.html" target="_blank">Turistický vláčik</a>
+          </div>
+        </div>
+
+        <div class="map-label label-city2">
+          Prakovce
+          <div class="popup">
+            <a href="https://www.prakovce.sk/organizacie-a-zdruzenia-0.html" target="_blank">Organizácie a združenia</a>
+            <a href="https://www.prakovce.sk/sport-a-turistika-0.html" target="_blank">Šport a turistika</a>
+            <a href="https://www.prakovce.sk/cirkev-1.html" target="_blank">Cirkev</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
