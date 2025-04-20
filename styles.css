@@ -31,6 +31,7 @@ html, body {
   .map-container {
     position: relative;
     display: inline-block;
+    transition: background-image 0.3s ease; /* Pridáme prechod pri zmene pozadia */
   }
   
   .map-container img {
