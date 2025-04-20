@@ -12,44 +12,6 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
-  }
-
-  /* Nastavenie štýlov pre veľkosti obrazovky nad 1200px (väčšie desktopy) */
-  @media screen and (min-width: 1200px) {
-    .container {
-      width: 70%; /* Väčšie desktopy */
-      margin: 0 auto;
-    }
-  }
-
-  /* Pre zariadenia s rozlíšením nad 768px, ale menšie ako 1200px (tablety, malé desktopy) */
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    .container {
-      width: 90%; /* Tablet a malé desktopy */
-      margin: 0 auto;
-    }
-  }
-
-  /* Pre mobilné zariadenia s rozlíšením do 768px */
-  @media screen and (max-width: 767px) {
-    .container {
-      width: 100%; /* Na mobiloch */
-      margin: 0 10px;
-    }
-
-    /* Prispôsobenie obrázkov a iných prvkov */
-    img {
-      width: 100%; /* Obrázky sa prispôsobia šírke obrazovky */
-      height: auto;
-    }
-  }
-
-  /* Prispôsobenie pre veľmi malé zariadenia, ako sú staršie mobilné telefóny */
-  @media screen and (max-width: 480px) {
-    body {
-      font-size: 14px; /* Zníženie veľkosti písma pre malé obrazovky */
-    }
   }
 
   #background-overlay {
@@ -84,7 +46,6 @@ html, body {
   .container {
     width: 100%;
     max-width: 900px;
-    padding: 10px;
   }
 
   header {
