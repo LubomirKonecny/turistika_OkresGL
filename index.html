@@ -1,135 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Turistika v Gelnickom okrese</title>
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      /* background-color: #3a1313; */
-      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-      padding: 20px;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 900px;
-    }
-
-    header {
-        background: #000000;
-        color: white;
-        padding: 1rem;
-        text-align: center;
-        border-radius: 24px 24px 0 0;
-    }
-
-    main {
-      /* background: rgb(19, 66, 16); */
-      background: linear-gradient(to top, white, black);
-      padding: 2rem;
-      border-radius: 0 0 24px 24px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .map-container {
-      position: relative;
-      display: inline-block;
-    }
-
-    .map-container img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
-
-    .map-label {
-      position: absolute;
-      color: white;
-      background: rgba(0, 0, 0, 0.7);
-      padding: 4px 8px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 14px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .popup {
-      visibility: hidden;
-      opacity: 0;
-      position: absolute;
-      bottom: 120%;
-      left: 50%;
-      transform: translateX(-50%);
-      background: white;
-      color: black;
-      padding: 10px;
-      border-radius: 6px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-      z-index: 10;
-      min-width: 160px;
-      transition: opacity 0.3s ease, visibility 0s linear 0.3s;
-    }
-
-    .popup a {
-      display: block;
-      color: #007BFF;
-      text-decoration: none;
-      margin-bottom: 5px;
-    }
-
-    .popup a:hover {
-      text-decoration: underline;
-    }
-
-    .map-label:hover .popup {
-      visibility: visible;
-      opacity: 1;
-      transition: opacity 0.3s ease, visibility 0s linear 0s;
-    }
-
-    /* Label positions */
-    .label-city1 {
-      top: 35%;
-      left: 72%;
-    }
-
-    .label-city2 {
-      top: 50%;
-      left: 64%;
-    }
-
-    .label-city3 {
-        top: 45%;
-        left: 56%;
-    }
-
-    .label-city4 {
-        top: 52%;
-        left: 45%;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="container">
+    <div class="container">
     <header>
       <h1>Turistika v Gelnickom okrese</h1>
     </header>
     <main>
       <div class="map-container">
-        <img src="./okres_gl_znaz.png" alt="Map of Region" />
+        <img src="./images/okres_gl_znaz.png" alt="Map of Region" />
 
-        <!-- Label with popup -->
         <div class="map-label label-city1">
           Gelnica
           <div class="popup">
