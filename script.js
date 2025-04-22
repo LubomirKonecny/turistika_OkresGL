@@ -2,8 +2,8 @@ const overlay = document.getElementById("background-overlay");
 
 const backgroundImages = {
   "label-city1": "./images/Gelnica_Kostol_Nanebovzatia_Panny_Marie.jpg",
-  "label-city2": "./images/Prakovce-2.jpg",
-  "label-city3": "./images/img_helcmanovce.jpg",
+  "label-city2": "./images/Prakovce_dedina.jpg",
+  "label-city3": "./images/Helcmanovce.jpg",
   "label-city4": "./images/img_mnisek.jpg",
 };
 

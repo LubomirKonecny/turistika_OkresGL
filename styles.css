@@ -4,8 +4,9 @@ html, body {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     }
 
   body {
@@ -18,8 +19,8 @@ html, body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     z-index: -1;
     pointer-events: none;
     background-image: url("./images/Gelnica-Srdce-2.jpg");
@@ -41,7 +42,7 @@ html, body {
   #background-overlay img.active {
     opacity: 1;
     z-index: 1;
-  }  
+  }
   
   .container {
     width: 100%;
@@ -49,34 +50,37 @@ html, body {
   }
 
   header {
-    background-image: url(./images/depositphotos_1267331-stock-photo-the-dark-brown-wood-texture.webp);
+    background-image: url(./images/cervene_drevo.webp);
     color: white;
     text-align: center;
     padding: 8px;
-    border-radius: 24px 24px 0 0;
+    border-radius: 20px 20px 0 0;
   }
   
   .map-container {
     position: relative;
     display: inline-block;
-    transition: background-image 0.3s ease; /* Pridáme prechod pri zmene pozadia */
+    padding: 0 20px 20px 20px;
+    border-radius: 0 0 20px 20px;
+    background-image: url(./images/cervene_drevo.webp);
+    transition: background-image 0.3s ease;
   }
   
   .map-container img {
     display: block;
     max-width: 100%;
     height: auto;
-    border-radius: 0 0 24px 24px;
   }
-  
+
+
+  /*značenia miest*/
   .map-label {
     position: absolute;
-    color: white;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 4px 8px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 14px;
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(to bottom, #b2e0ff, #3399ff);
+    border-radius: 50%;
+    border: 2px solid white;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
@@ -85,10 +89,10 @@ html, body {
     visibility: hidden;
     opacity: 0;
     position: absolute;
-    bottom: 120%;
+    bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background-image: url("./images/1000_F_65473506_rjydmo8sf1stj5KiJhukACvwVHNWxQAf.jpg");
+    background-image: url("./images/papier.jpg");
     color: black;
     padding: 10px;
     border-radius: 6px;
@@ -114,24 +118,50 @@ html, body {
     opacity: 1;
     transition: opacity 0.3s ease, visibility 0s linear 0s;
   }
-  
-  /* Label pozície */
+
+  /*poloha značení miest*/
+
+  .margecany {
+    top: 21%;
+    left: 85%;
+  }
+
+  .jaklovce {
+    top: 27%;
+    left: 82%;
+  }
+
   .label-city1 {
-    top: 35%;
-    left: 72%;
+    top: 34%;
+    left: 74%;
   }
   
   .label-city2 {
-    top: 50%;
-    left: 64%;
+    top: 49%;
+    left: 67%;
   }
   
   .label-city3 {
     top: 45%;
-    left: 56%;
+    left: 60%;
   }
   
   .label-city4 {
-    top: 52%;
+    top: 48%;
+    left: 50%;
+  }
+
+  .smolnicka-huta {
+    top: 66%;
     left: 45%;
+  }
+
+  .smolnik {
+    top: 72%;
+    left: 39%;
+  }
+
+  .uhorna {
+    top: 80%;
+    left: 28%;
   }
